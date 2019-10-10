@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body onload="document.getElementById('hidestuff').style.display='none'">
+<script>
+
+var ctr = 0;
+
+function hideit() {
+		
+        ctr += 1;
+        
+    	document.getElementById('demo').style.display='none';
+        document.getElementById('clickme').style.display='block';
+        if((ctr % 2) || (ctr == 0))      
+        	document.getElementById('hidestuff').style.display='none';
+        
+}
+
+function showme() {
+
+	ctr -= 1;
+
+	document.getElementById('demo').style.display='block';
+    document.getElementById('clickme').style.display='none';
+  
+    if(!(ctr % 2));
+        	document.getElementById('hidestuff').style.display='block';
+
+}
+
+</script>
+<h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can show hidden HTML elements.</p>
+
+<p id="demo" style="display:none">Hello JavaScript!</p>
+
+<button id="clickme" type="button" onclick="showme();">Click Me!</button>
+
+<button id="hidestuff" type="button" onclick="hideit();">Hide Me!</button>
+
+</body>
+</html> 
